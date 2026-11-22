@@ -1,0 +1,39 @@
+SAMPLE RESUME (fictional, for testing)
+Priya Venkatesh
+Hyderabad, India | priya.v@example.com | github.com/example-priya
+
+SUMMARY
+Final-year B.Tech (Computer Science) student focused on machine learning and LLM applications. Built an end-to-end RAG assistant and a customer churn model during an internship.
+
+TECHNICAL SKILLS
+Languages: Python, SQL, JavaScript (basic)
+ML / DL: scikit-learn, pandas, NumPy, TensorFlow/Keras, XGBoost
+GenAI: LangChain, OpenAI API, Hugging Face Transformers, FAISS, sentence-transformers, prompt engineering
+Data & Tools: PostgreSQL, MySQL, Git, Docker, FastAPI, Streamlit, Jupyter
+
+EXPERIENCE
+Machine Learning Intern, DataNest Analytics (Hyderabad) | May 2025 - Aug 2025
+- Built a customer churn prediction model (XGBoost) on 120k telecom records; improved recall on churners from 0.61 to 0.78 using class weighting and threshold tuning.
+- Wrote SQL pipelines in PostgreSQL to join billing, usage and support-ticket tables into a feature table.
+- Presented SHAP-based feature importance to the business team.
+
+PROJECTS
+1. DocuQuery - RAG assistant for college policy PDFs
+   - Python, LangChain, FAISS, sentence-transformers (all-MiniLM-L6-v2), OpenAI GPT-4o-mini, Streamlit.
+   - Chunked 300+ pages with recursive splitting (800 tokens, 100 overlap); added source citations.
+   - Reduced wrong answers by adding a "not found in documents" fallback prompt.
+2. Plant Disease Classifier - CNN image classification
+   - TensorFlow/Keras, transfer learning with MobileNetV2 on the PlantVillage dataset (38 classes).
+   - 94% validation accuracy; used data augmentation and early stopping to reduce overfitting.
+3. Movie Review Sentiment Analysis
+   - Compared Logistic Regression (TF-IDF) with an LSTM; LSTM reached 88% accuracy on IMDB reviews.
+
+EDUCATION
+B.Tech, Computer Science and Engineering - JNTU Hyderabad, 2022 - 2026, CGPA 8.4/10
+
+CERTIFICATIONS
+- Deep Learning Specialization (Coursera)
+- AWS Cloud Practitioner (in progress)
+
+ACHIEVEMENTS
+- Top 10 in college-level hackathon (2024) for a resume-screening chatbot.

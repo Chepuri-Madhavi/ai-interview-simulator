@@ -1,0 +1,26 @@
+SAMPLE JOB DESCRIPTION (fictional, for testing)
+Associate AI/ML Engineer - LLM Applications
+BrightLeaf Software, Bengaluru (Hybrid)
+
+About the role
+You will build and ship LLM-powered features: retrieval-augmented generation (RAG) systems, AI agents and classic ML models for our B2B analytics platform.
+
+Responsibilities
+- Design and build RAG pipelines: document ingestion, chunking, embeddings, vector search and evaluation.
+- Build agentic workflows with LangChain and LangGraph, including tool calling.
+- Train, evaluate and deploy classical ML models (classification, regression) with scikit-learn.
+- Write efficient SQL for feature extraction and analytics on PostgreSQL.
+- Expose models through REST APIs (FastAPI) and containerize them with Docker.
+- Monitor LLM quality: hallucination checks, prompt versioning, offline evaluation sets.
+
+Requirements
+- 0-2 years of experience (strong internships/projects considered).
+- Strong Python (OOP, data structures, exception handling) and SQL (joins, subqueries, window functions).
+- Solid ML fundamentals: bias/variance, evaluation metrics, cross-validation.
+- Understanding of deep learning: neural networks, CNNs, RNNs/LSTMs, backpropagation.
+- Hands-on with LLMs, transformers, embeddings and vector databases (FAISS, Pinecone or pgvector).
+- Experience with prompt engineering; exposure to fine-tuning (LoRA/PEFT) is a plus.
+
+Nice to have
+- LangGraph, MLflow, AWS (SageMaker, Lambda), CI/CD.
+- Experience evaluating RAG systems (RAGAS or similar).

@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Colors are RGB triplets so Tailwind opacity modifiers work. Light first, dark via system or the Settings toggle. */
+:root {
+  --bg: 244 245 241; --surface: 255 255 255; --surface-2: 236 238 232; --fg: 26 33 29; --muted: 90 100 93; --line: 215 219 210;
+  --accent: 14 107 88; --accent-ink: 255 255 255; --accent-soft: 220 239 232;
+  --good: 31 122 62; --good-soft: 225 242 229; --warn: 154 88 6; --warn-soft: 251 239 217; --bad: 180 35 24; --bad-soft: 251 228 225;
+  --rec: 217 45 32; --stage: 23 32 28; --stage-fg: 232 238 234; --stage-muted: 157 170 162;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: 15 19 17; --surface: 23 28 25; --surface-2: 31 38 34; --fg: 230 235 231; --muted: 154 165 158; --line: 44 53 48;
+    --accent: 63 191 156; --accent-ink: 6 19 14; --accent-soft: 22 50 42;
+    --good: 92 203 132; --good-soft: 21 48 31; --warn: 231 166 74; --warn-soft: 51 38 15; --bad: 240 116 104; --bad-soft: 58 25 22;
+    --rec: 240 68 56; --stage: 10 14 12; --stage-fg: 232 238 234; --stage-muted: 142 154 147;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: 15 19 17; --surface: 23 28 25; --surface-2: 31 38 34; --fg: 230 235 231; --muted: 154 165 158; --line: 44 53 48;
+  --accent: 63 191 156; --accent-ink: 6 19 14; --accent-soft: 22 50 42;
+  --good: 92 203 132; --good-soft: 21 48 31; --warn: 231 166 74; --warn-soft: 51 38 15; --bad: 240 116 104; --bad-soft: 58 25 22;
+  --rec: 240 68 56; --stage: 10 14 12; --stage-fg: 232 238 234; --stage-muted: 142 154 147;
+  color-scheme: dark;
+}
+body { @apply bg-bg text-fg font-sans antialiased; font-size: 15px; line-height: 1.55; }
+h1, h2, h3 { @apply font-display tracking-tight; text-wrap: balance; }
+:focus-visible { outline: 2px solid rgb(var(--accent)); outline-offset: 2px; }
+
+@layer components {
+  .btn { @apply inline-flex min-h-10 items-center justify-center gap-2 rounded-lg border border-line bg-surface px-4 py-2 text-sm font-semibold text-fg transition hover:bg-surface2 disabled:cursor-not-allowed disabled:opacity-45; }
+  .btn-primary { @apply border-accent bg-accent text-accent-ink hover:bg-accent hover:brightness-110; }
+  .btn-danger { @apply text-bad; }
+  .btn-rec { @apply border-rec bg-rec text-white hover:bg-rec; }
+  .btn-ghost { @apply border-transparent bg-transparent; }
+  .panel { @apply rounded-xl border border-line bg-surface p-5; }
+  .eyebrow { @apply text-xs font-semibold uppercase tracking-wider text-muted; }
+  .chip { @apply inline-flex items-center gap-1.5 rounded-full bg-surface2 px-2.5 py-0.5 text-[13px] font-medium; }
+  .input { @apply w-full rounded-lg border border-line bg-surface px-3 py-2.5 text-fg placeholder:text-muted; }
+  .label { @apply text-sm font-semibold; }
+  .page-title { @apply text-3xl font-extrabold; }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }

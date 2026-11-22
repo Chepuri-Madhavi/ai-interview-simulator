@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+# Secrets and local data (resumes, recordings, database)
+.env
+backend/data/
+*.db
+# Node
+node_modules/
+frontend/dist/
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+*.zip

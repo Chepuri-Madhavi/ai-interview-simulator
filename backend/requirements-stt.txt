@@ -1,0 +1,2 @@
+# Optional: local server-side speech-to-text (STT_PROVIDER=faster_whisper). Downloads a Whisper model on first use.
+faster-whisper==1.1.0
