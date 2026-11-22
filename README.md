@@ -55,7 +55,7 @@ See [docs/API.md](docs/API.md) for every endpoint and [docs/DATABASE.md](docs/DA
 
 ## Requirements
 
-- Python 3.11+ and Node.js 20+
+- Python 3.11 to 3.14 and Node.js 20+
 - An Anthropic API key ([console.anthropic.com](https://console.anthropic.com/))
 - Chrome or Edge for live speech-to-text (other browsers can record and type, or use server-side transcription)
 - Camera and microphone access only works on `https://` or `http://localhost`
@@ -72,6 +72,18 @@ pip install -r requirements-dev.txt
 cp .env.example .env               # then set ANTHROPIC_API_KEY and SECRET_KEY
 uvicorn app.main:app --reload --port 8000
 ```
+
+On Windows (PowerShell or VS Code terminal) you don't need to activate the environment:
+
+```powershell
+cd backend
+py -m venv .venv
+.venv\Scripts\python -m pip install -r requirements-dev.txt
+copy .env.example .env
+.venv\Scripts\python -m uvicorn app.main:app --reload --port 8000
+```
+
+For PostgreSQL, also run `pip install -r requirements-postgres.txt`.
 
 The API docs are then at http://localhost:8000/docs. The database tables are created on first start.
 

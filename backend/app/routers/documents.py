@@ -38,7 +38,7 @@ async def upload_document(
         else:
             raise ExtractionError("Upload a PDF or DOCX file, or paste the text.")
     except ExtractionError as e:
-        raise HTTPException(status.HTTP_422_UNPROCESSABLE_ENTITY, str(e)) from e
+        raise HTTPException(422, str(e)) from e
     doc = Document(user_id=user.id, kind=kind, filename=name, text=content)
     db.add(doc)
     db.commit()
